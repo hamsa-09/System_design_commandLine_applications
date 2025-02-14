@@ -13,7 +13,7 @@ public class LibraryManagementSystem {
         users = new ArrayList<>();
         transactions = new ArrayList<>();
     }
- 
+
     public void addBook(String title, String author, int totalCopies) {
         String bookId = UUID.randomUUID().toString();
         books.add(new Book(bookId, title, author, totalCopies));
@@ -54,7 +54,7 @@ public class LibraryManagementSystem {
             book.borrowBook();
             System.out.println("Book borrowed successfully.");
         } else {
-            System.out.println("Book borrowing failed.");
+            System.out.println("Book borrowing failed.");  
         }
     }
 
