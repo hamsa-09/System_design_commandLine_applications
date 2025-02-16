@@ -10,21 +10,7 @@ public class BillingSystem {
     }
     return null;
 }
-public static void getdiscount(int total){
-    double discount=0;
-    if(total>500){
-        discount = total-((total*10)/100);
-        System.out.println("Total after discount 10%: "+discount);
 
-    }
-    else if(total>300){
-        discount = total-((total*5)/100);
-        System.out.println("Total after discount 5%: "+discount);
-
-    }
-    else
-    System.out.println("Total: "+total);
-}
     public static void main(String[] args) {
         Scanner sc=new Scanner(System.in);
 
@@ -58,7 +44,8 @@ public static void getdiscount(int total){
         for(Billing b:bill){
              total=total+ b.menuItem.getPrice()*b.quantity;
         }
-        getdiscount(total);
-        sc.close();
+        Billing b=new Billing();
+        b.getdiscount(total);
+      sc.close();
     }
 }

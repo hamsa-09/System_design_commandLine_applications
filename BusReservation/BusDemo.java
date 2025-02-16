@@ -17,7 +17,7 @@ public class BusDemo {
             option=sc.nextInt();
             if(option==1){
                Booking booking=new Booking();
-               if(booking.isAvailable(buses,booking)){
+               if(booking.isAvailable(buses,bookings)){
                 bookings.add(booking);
                 System.out.println("----Your booking is done-----");
                }
