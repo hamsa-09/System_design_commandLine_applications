@@ -3,27 +3,27 @@ import java.util.*;
 
 public class Main {
     static Scanner sc=new Scanner(System.in);
-    public static void getPatient(List<Patient> patient) {
+    public static String getPatient(List<Patient> patient) {
 
     System.out.println("Enter email:");
     String email = sc.next();
     for(Patient p:patient){
-    if(p.getEmail().equals(email)){
+    if(p.getEmail().equalsIgnoreCase(email)){
         System.out.println("Patient found");
-        return;
+        return p.getName();
     }
     else{
         System.out.println("Enter name:");
         String name = sc.next();
         String password=sc.next();
         patient.add(new Patient(patient.size()+1,name,email,password));
-        return;
+        return name;
     }
     }
     }
     public static Doctor getSpecialist(List<Doctor> docList,String specialist){
         for(Doctor d:docList){
-            if(d.getSpecialist().equals(specialist)){
+            if(d.getSpecialist().equalsIgnoreCase(specialist)){
                 return d;
             }
         }
@@ -41,6 +41,7 @@ public class Main {
 
         List<Doctor> doctorList = new ArrayList<>();
         List<Patient> patientList=new ArrayList<>();
+        List<AppointmentSchedule> appointment=new ArrayList<>();
         List<Prescription> prescriptions=new ArrayList<>();
         List<MedicalRecord> medicalRecords=new ArrayList<>();
 
@@ -60,18 +61,23 @@ public class Main {
             switch(option){
                 case 1:
                 System.out.println("Enter patient details:");
-                getPatient(patientList);
+                String patientname=getPatient(patientList);
                 System.out.println("Enter Specialist:");
                 String specialist=sc.next();
                 Doctor requireDoctor=getSpecialist(doctorList,specialist);
                 if(requireDoctor==null){
-                    System.out.println("Enter date:");
-                    String date=sc.next();
-                  
-
+                    System.out.println("Required Specialist not available");
                 }
                 else{
-                    System.out.println("Specialist is not available");
+                    System.out.println("Enter date:");
+                    String date=sc.next();
+                    if(requireDoctor.getDateList().contains(date)){
+                        System.out.println("AppointmentBooked successfully");
+                        appointment.add(new AppointmentSchedule(appointment.size(),requireDoctor.getName(),patientname,date));
+                    }
+                    else{
+                        System.out.println("Doctor at this date is not available");
+                    }
                 }
 
 

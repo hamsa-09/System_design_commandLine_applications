@@ -9,4 +9,7 @@ class Patient extends User {
     public boolean authentication(){
         return true;
     }
+    public String getName(){
+        return name;
+    }
 }

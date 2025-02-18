@@ -1,0 +1,63 @@
+{
+    // Use IntelliSense to learn about possible attributes.
+    // Hover to view descriptions of existing attributes.
+    // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "type": "java",
+            "name": "Current File",
+            "request": "launch",
+            "mainClass": "${file}"
+        },
+        {
+            "type": "java",
+            "name": "BusDemo",
+            "request": "launch",
+            "mainClass": "BusDemo",
+            "projectName": "System_design_555c7fd5"
+        },
+        {
+            "type": "java",
+            "name": "Main",
+            "request": "launch",
+            "mainClass": "DocterPatient.Main",
+            "projectName": "System_design_555c7fd5"
+        },
+        {
+            "type": "java",
+            "name": "DocumentReaderMainClass",
+            "request": "launch",
+            "mainClass": "DocumentReader.DocumentReaderMainClass",
+            "projectName": "System_design_555c7fd5"
+        },
+        {
+            "type": "java",
+            "name": "PizzaShop",
+            "request": "launch",
+            "mainClass": "FactoryMethod.PizzaShop",
+            "projectName": "System_design_555c7fd5"
+        },
+        {
+            "type": "java",
+            "name": "LibraryManagementSystem",
+            "request": "launch",
+            "mainClass": "LibraryManagementSystem",
+            "projectName": "System_design_555c7fd5"
+        },
+        {
+            "type": "java",
+            "name": "Main(1)",
+            "request": "launch",
+            "mainClass": "Main",
+            "projectName": "System_design_555c7fd5"
+        },
+        {
+            "type": "java",
+            "name": "BillingSystem",
+            "request": "launch",
+            "mainClass": "RestuarantBilling.BillingSystem",
+            "projectName": "System_design_555c7fd5"
+        }
+    ]
+}

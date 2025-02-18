@@ -28,4 +28,5 @@ class Doctor extends User{
     public List<String> getDateList(){
         return availableDate;
     }
+   
 }
